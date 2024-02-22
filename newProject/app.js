@@ -5,6 +5,8 @@ const express = require("express");
 const app = express();
 
 console.log("dossier des vues = ", path.join(__dirname, 'views'));
+// Configurer Express pour servir des fichiers statiques depuis le dossier 'img'
+app.use("/img", express.static(path.join(__dirname, "img")));
 // Montrer à Express.js où se trouvent les vues
 app.set('views', path.join(__dirname, 'views'));
 
